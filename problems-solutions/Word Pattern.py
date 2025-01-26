@@ -5,7 +5,7 @@ class Solution:
         unique_letters = set([letter for letter in pattern])
         unique_words = set(split_words)
 
-        if len(unique_letters) != len(unique_words):
+        if len(unique_letters) != len(unique_words) or len(pattern) != len(split_words):
             return False
 
         for letter, word in zip(pattern, split_words):
@@ -15,9 +15,3 @@ class Solution:
             elif matching_pattern[letter] != word:
                 return False
         return True
-
-                    
-        
-
-s = Solution()
-print(s.wordPattern('aba','dog cat cat'))
