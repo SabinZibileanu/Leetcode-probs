@@ -14,7 +14,7 @@ class Solution:
         duplicates_check = []
 
         while ok:
-            print(n)
+            
             p2_sum = self.power_of_2_sum(n)
             if p2_sum not in duplicates_check:
                 if p2_sum == 1:
